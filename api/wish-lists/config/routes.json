@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/wish-lists",
+      "handler": "wish-lists.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/wish-lists/count",
+      "handler": "wish-lists.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/wish-lists/:id",
+      "handler": "wish-lists.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/wish-lists",
+      "handler": "wish-lists.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/wish-lists/:id",
+      "handler": "wish-lists.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/wish-lists/:id",
+      "handler": "wish-lists.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

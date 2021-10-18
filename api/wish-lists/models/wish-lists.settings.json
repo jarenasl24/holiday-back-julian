@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wish_lists",
+  "info": {
+    "name": "Wish Lists"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "products": {
+      "collection": "products"
+    },
+    "subscriber": {
+      "model": "subscribers"
+    }
+  }
+}
