@@ -3,7 +3,13 @@ const createsend = require('createsend-node');
 
 module.exports = {
   async create(ctx) {
+    console.log(ctx)
     let entity;
+
+    entity = await strapi.services.mails.create(ctx.request.body);
+
+    console.log(entity)
+
     const auth = { apiKey: 'EWpqenSx+bTJgpuk+XGzh+XRtsGic1kw6aXOyLtgMsXZ5Mhrfff/HeDegx7tykHojBkacywKviD8UPI0dEUfsAvSVBZtbUaUAa1ADOWmfChWpOICgLHPssEXbWwKei3qKPBjaOOM9rDwN0ed/UYL7Q==' }
     const api = createsend(auth)
 
@@ -15,16 +21,12 @@ module.exports = {
 
     // Add the 'To' email address
     details.to = [
-      'Freddy Llano <freddy.llano@ddblatinapr.com>',
-      'Julián Arenas <julian.arenas@ddblatinapr.com>',
-      'Santiago Roman <santiago.roman@ddblatinapr.com>',
-      'Sergio Pinto <sergio.ortiz@ddblatinapr.com>'
+      'Querido Santa <' + entity.email + '>',
     ]
 
     // Add mail merge variables
     details.data = {
-      variableName: 'Prueba',
-      1: 'probando'
+      link: entity.link
     }
 
     // Send the smart email(and provide a callback function that takes an error and a response parameter)
@@ -36,7 +38,6 @@ module.exports = {
       }
     })
 
-    entity = await strapi.services.mails.create(ctx.request.body);
     return sanitizeEntity(entity, { model: strapi.models.mails });
   },
 };

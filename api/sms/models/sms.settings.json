@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "mails",
+  "collectionName": "sms",
   "info": {
-    "name": "Emails",
+    "name": "Sms",
     "description": ""
   },
   "options": {
@@ -12,8 +12,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "email": {
-      "type": "email"
+    "phone": {
+      "type": "biginteger"
     },
     "link": {
       "type": "string"
