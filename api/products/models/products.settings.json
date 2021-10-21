@@ -18,7 +18,7 @@
     },
     "description": {
       "type": "text",
-      "required": true
+      "required": false
     },
     "price": {
       "type": "decimal",
@@ -44,6 +44,11 @@
     },
     "product_category": {
       "model": "product-categories"
+    },
+    "inStock": {
+      "type": "boolean",
+      "default": true,
+      "required": true
     }
   }
 }
