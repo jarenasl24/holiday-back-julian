@@ -5,4 +5,10 @@
  * to customize this model
  */
 
-module.exports = {};
+const uuid = require('uuid');
+
+module.exports = {
+  lifecycles: {
+    beforeCreate: async (model) => model.uid = uuid.v4()
+  }
+};

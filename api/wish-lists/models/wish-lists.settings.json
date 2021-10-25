@@ -16,6 +16,10 @@
     },
     "subscriber": {
       "model": "subscribers"
+    },
+    "uid": {
+      "default": "",
+      "type": "string"
     }
   }
 }
