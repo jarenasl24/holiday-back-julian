@@ -20,6 +20,9 @@
     "color": {
       "type": "colorpicker",
       "columnType": "string"
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }
