@@ -58,6 +58,9 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "wish_list": {
+      "model": "wish-lists"
     }
   }
 }
